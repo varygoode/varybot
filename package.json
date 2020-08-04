@@ -1,0 +1,23 @@
+{
+  "name": "varybot",
+  "version": "1.0.0",
+  "description": "bot goes brr",
+  "main": "VaryBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varygoode/varybot.git"
+  },
+  "author": "Rob Vary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varygoode/varybot/issues"
+  },
+  "homepage": "https://github.com/varygoode/varybot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "enmap": "^5.4.1"
+  }
+}
