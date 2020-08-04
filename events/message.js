@@ -4,6 +4,9 @@ module.exports = (client, message) => {
     if(message.guild.id === '732288737504919593') {
     message.channel.send("OH! A QUESTION! <@&732289380168892427> LOOK!").catch(console.error);
     }
+    if(message.guild.id === '434542839054204928') {
+    message.channel.send("OH! A QUESTION! <@&693220731999354950> LOOK!").catch(console.error);
+    }
   }
 
   // Ignore all bots
