@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
 		}
 	else {
 		const avatarList = message.mentions.users.map(user => {
-		return `${user.username} '\'s avatar: ${user.displayAvatarURL}`;
+		return `${user.username} \'s avatar: ${user.displayAvatarURL}`;
 		});
 
 		message.channel.send(avatarList);
