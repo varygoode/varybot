@@ -21,13 +21,14 @@ module.exports.run = async (client, message, args) => {
 
   let embed = new Discord.MessageEmbed()
     .setAuthor(user.username)
-    .setDescription("Users Info", true)
+    .setDescription("User's Info", true)
     .setColor("#64FF00", true)
     .addField("Full Username:", `${user.username}#${user.discriminator}`, true)
     .addField("ID:", user.id, true)
     .addField("Created at:", user.createdAt, true)
     .addField("Status:", `${user.presence.status}`, true)
     .addField("Game:", `${user.presence.game}`, true)
+    .addBlankField(true)
     .addField("Roles:", rolemap, true);
 
   message.channel.send(embed);
