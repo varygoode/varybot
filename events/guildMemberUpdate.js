@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-module.exports = (oldMember, newMember) => {
+module.exports = (client, oldMember, newMember) => {
 
   	console.log(`${oldMember.displayName}`);
 
