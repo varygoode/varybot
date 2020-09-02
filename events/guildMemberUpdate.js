@@ -1,5 +1,7 @@
 module.exports = (role) => {
 
-  console.log(`${role.name} Changed`);
+  let roleID = role.id;
+
+  console.log(`${roleID} Changed`);
   
 };
