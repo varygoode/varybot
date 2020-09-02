@@ -11,7 +11,7 @@ module.exports = (client, oldMember, newMember) => {
             if (newMemberRoleMap.length > 1024) newMemberRoleMap = "Too many roles to display!";
             if (!newMemberRoleMap) newMemberRoleMap = "No roles.";
 
-  	console.log(newMemberRoleMap.toString());
+  	console.log(newMemberRoleMap.keys());
 
   	// If the role(s) are present on the old member object but no longer on the new one (i.e role(s) were removed)
 	const removedRole = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
