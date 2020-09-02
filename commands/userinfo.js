@@ -15,9 +15,9 @@ module.exports.run = async (client, message, args) => {
   let rolemap = guildMember.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(r => r)
-            .join(",");
-            if (rolemap.length > 1024) rolemap = "To many roles to display";
-            if (!rolemap) rolemap = "No roles";
+            .join(",\\n");
+            if (rolemap.length > 1024) rolemap = "Too many roles to display!";
+            if (!rolemap) rolemap = "No roles.";
 
   let embed = new Discord.MessageEmbed()
     .setAuthor(user.username)
