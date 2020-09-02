@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+exports.run = (bot, message, args) => {
   let guildMember;
 
   if (message.mentions.members.first()) {
