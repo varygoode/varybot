@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Created at:", user.createdAt, true)
     .addField("Status:", `${user.presence.status}`, true)
     .addField("Game:", `${user.presence.game}`, true)
-    .addBlankField(true)
+    .addBlankField()
     .addField("Roles:", rolemap, true);
 
   message.channel.send(embed);
