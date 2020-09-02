@@ -1,11 +1,22 @@
-module.exports = (oldMember, newMember) => {
+const Discord = require('discord.js');
 
-  console.log(`${newMember} Changed`);
+module.exports = (client, oldMember, newMember) => {
 
-  const newRole = newMember.roles.cache
-    .filter(r => !oldMember.roles.cache.has(r.id))
-    .first()
-
-  if(newRole) console.log(`${newRole} was added!`);
+  const messagechannel = msg.guild.channels.find('name', 'general');
+        if (oldMember.roles.size < newMember.roles.size) {
+            const embed = new Discord.RichEmbed()
+                .setColor('#FE2E2E')
+                .setTimestamp()
+                .setAuthor('Role added!')
+                .addField(`Member:`, `${oldMember.user.tag} (${oldMember.id})`);
+            for (const role of newMember.roles.map(x => x.id)) {
+                if (!oldMember.roles.has(role)) {
+                    embed.addField(`Role:`, `${oldMember.guild.roles.get(role).name}`);
+                }
+            }
+            messagechannel.send({
+                embed
+            });
+        }
   
 };
