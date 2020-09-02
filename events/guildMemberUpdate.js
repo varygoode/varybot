@@ -31,18 +31,21 @@ module.exports = (client, oldMember, newMember) => {
 			if(!newMember.roles.cache.has("693215135053119568") && !newMember.roles.cache.has("693214736736714762") &&
 			   !newMember.roles.cache.has("693214952944828426") && !newMember.roles.cache.has("749484771146465321") &&
 			   !newMember.roles.cache.has("738523221946794145")) {
+			   	console.log("GAMES separator being removed");
 				if(newMember.roles.cache.has("742637482100785186")) newMember.roles.remove("742637482100785186");
 			}
 			//Remove NERDS role separator
 			if(!newMember.roles.cache.has("743625569551253636") && !newMember.roles.cache.has("743481813972025405") &&
 			   !newMember.roles.cache.has("743484247255285783") && !newMember.roles.cache.has("750675217004888124") &&
 			   !newMember.roles.cache.has("743482189760692237")) {
+			   	console.log("NERDS separator being removed");
 				if(newMember.roles.cache.has("742637482134208592")) newMember.roles.remove("742637482134208592");
 			}
 			//Remove PINGS role separator
 			if(!newMember.roles.cache.has("693220531364954246") && !newMember.roles.cache.has("742574117001363516") &&
 			   !newMember.roles.cache.has("742621188068737044") && !newMember.roles.cache.has("742621764949114981") &&
 			   !newMember.roles.cache.has("693220731999354950")) {
+			   	console.log("PINGS separator being removed");
 				if(newMember.roles.cache.has("742637731594633236")) newMember.roles.remove("742637731594633236");
 			}
 		}
@@ -55,18 +58,21 @@ module.exports = (client, oldMember, newMember) => {
 			if(newMember.roles.cache.has("743625569551253636") || newMember.roles.cache.has("693214736736714762") ||
 			   newMember.roles.cache.has("693214952944828426") || newMember.roles.cache.has("749484771146465321") ||
 			   newMember.roles.cache.has("738523221946794145")) {
+			   	console.log("GAMES separator being added");
 				newMember.roles.add("742637482100785186");
 			}
 			//Add NERDS role separator
 			if(newMember.roles.cache.has("693215135053119568") || newMember.roles.cache.has("743481813972025405") ||
 			   newMember.roles.cache.has("743484247255285783") || newMember.roles.cache.has("750675217004888124") ||
 			   newMember.roles.cache.has("743482189760692237")) {
+			   	console.log("NERDS separator being added");
 				newMember.roles.add("742637482134208592");
 			}
 			//Add PINGS role separator
 			if(newMember.roles.cache.has("693220531364954246") || newMember.roles.cache.has("742574117001363516") ||
 			   newMember.roles.cache.has("742621188068737044") || newMember.roles.cache.has("742621764949114981") ||
 			   newMember.roles.cache.has("693220731999354950")) {
+			   	console.log("PINGS separator being added");
 				newMember.roles.add("742637731594633236");
 			}
 		}
