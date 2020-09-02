@@ -1,7 +1,5 @@
-module.exports = (role) => {
+module.exports = (oldMember, newMember) => {
 
-  let roleID = role.id.toString();
-
-  console.log(`${roleID} Changed`);
+  console.log(`${newMember} Changed`);
   
 };
