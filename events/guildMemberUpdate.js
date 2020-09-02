@@ -17,14 +17,14 @@ module.exports = (client, oldMember, newMember) => {
 	const removedRole = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
 	if (removedRole.size > 0) {
 		console.log(`The role ${removedRole.map(r => r.name)} was removed from ${oldMember.displayName}.`);
-		console.log(removedRole.get("738516185611501670"));
+		console.log(removedRole.get("738516185611501670").id);
 	}
 
 	// If the role(s) are present on the new member object but are not on the old one (i.e role(s) were added)
 	const addedRole = newMember.roles.cache.filter(role => !oldMember.roles.cache.has(role.id));
 	if (addedRole.size > 0) {
 		console.log(`The role ${addedRole.map(r => r.name)} was added to ${oldMember.displayName}.`);
-		if(addedRole.has("<@&738516185611501670>") || addedRole.has("<@&738516083753091073>")) {
+		if(addedRole.has("738516185611501670") || addedRole.has("738516083753091073")) {
 			console.log("Gottem");
 		}
 	}
