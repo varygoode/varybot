@@ -1,4 +1,6 @@
 exports.run = (bot, message, args) => {
+  message.channel.send("gottem");
+
   let guildMember;
 
   if (message.mentions.members.first()) {
