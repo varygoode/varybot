@@ -34,13 +34,13 @@ module.exports = (client, oldMember, newMember) => {
 				if(newMember.roles.cache.has("742637482100785186")) newMember.roles.remove("742637482100785186");
 			}
 			//Remove NERDS role separator
-			if(!newMember.roles.cache.has("743625569551253636") && !newMember.roles.cache.has("743481813972025405") &&
+			else if(!newMember.roles.cache.has("743625569551253636") && !newMember.roles.cache.has("743481813972025405") &&
 			   !newMember.roles.cache.has("743484247255285783") && !newMember.roles.cache.has("750675217004888124") &&
 			   !newMember.roles.cache.has("743482189760692237")) {
 				if(newMember.roles.cache.has("742637482134208592")) newMember.roles.remove("742637482134208592");
 			}
 			//Remove PINGS role separator
-			if(!newMember.roles.cache.has("693220531364954246") && !newMember.roles.cache.has("742574117001363516") &&
+			else if(!newMember.roles.cache.has("693220531364954246") && !newMember.roles.cache.has("742574117001363516") &&
 			   !newMember.roles.cache.has("742621188068737044") && !newMember.roles.cache.has("742621764949114981") &&
 			   !newMember.roles.cache.has("693220731999354950")) {
 				if(newMember.roles.cache.has("742637731594633236")) newMember.roles.remove("742637731594633236");
@@ -49,7 +49,7 @@ module.exports = (client, oldMember, newMember) => {
 
 		// If the role(s) are present on the new member object but are not on the old one (i.e role(s) were added)
 		const addedRole = newMember.roles.cache.filter(role => !oldMember.roles.cache.has(role.id));
-		if (addedRole.size > 0) {
+		else if (addedRole.size > 0) {
 			console.log(`The role ${addedRole.map(r => r.name)} was added to ${oldMember.displayName}.`);
 			//Add GAME role separator
 			if(newMember.roles.cache.has("743625569551253636") || newMember.roles.cache.has("693214736736714762") ||
@@ -58,13 +58,13 @@ module.exports = (client, oldMember, newMember) => {
 				newMember.roles.add("742637482100785186");
 			}
 			//Add NERDS role separator
-			if(newMember.roles.cache.has("693215135053119568") || newMember.roles.cache.has("743481813972025405") ||
+			else if(newMember.roles.cache.has("693215135053119568") || newMember.roles.cache.has("743481813972025405") ||
 			   newMember.roles.cache.has("743484247255285783") || newMember.roles.cache.has("750675217004888124") ||
 			   newMember.roles.cache.has("743482189760692237")) {
 				newMember.roles.add("742637482134208592");
 			}
 			//Add PINGS role separator
-			if(newMember.roles.cache.has("693215135053119568") || newMember.roles.cache.has("743481813972025405") ||
+			else if(newMember.roles.cache.has("693215135053119568") || newMember.roles.cache.has("743481813972025405") ||
 			   newMember.roles.cache.has("743484247255285783") || newMember.roles.cache.has("750675217004888124") ||
 			   newMember.roles.cache.has("743482189760692237")) {
 				newMember.roles.add("742637731594633236");
