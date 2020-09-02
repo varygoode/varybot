@@ -6,8 +6,8 @@ module.exports = (client, oldMember, newMember) => {
             .sort((a, b) => b.position - a.position)
             .map(r => r)
             .join(",\n");
-            if (rolemap.length > 1024) rolemap = "Too many roles to display!";
-            if (!rolemap) rolemap = "No roles.";
+            if (newMemberRoleMap.length > 1024) newMemberRoleMap = "Too many roles to display!";
+            if (!newMemberRoleMap) newMemberRoleMap = "No roles.";
 
   	console.log(newMemRoleMap.toString());
 
