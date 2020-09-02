@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
   let rolemap = guildMember.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(r => r)
-            .join(",\\n");
+            .join(",\n");
             if (rolemap.length > 1024) rolemap = "Too many roles to display!";
             if (!rolemap) rolemap = "No roles.";
 
