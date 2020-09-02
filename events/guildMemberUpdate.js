@@ -2,14 +2,20 @@ const Discord = require('discord.js');
 
 module.exports = (client, oldMember, newMember) => {
 
+  	let separatorRoles1 = ["<@&738516185611501670>", "<@&738516083753091073>"];
+
   	let newMemberRoleMap = newMember.roles.cache
             .sort((a, b) => b.position - a.position)
             .map(r => r)
-            .join(",\n");
+            .join(", ");
             if (newMemberRoleMap.length > 1024) newMemberRoleMap = "Too many roles to display!";
             if (!newMemberRoleMap) newMemberRoleMap = "No roles.";
 
   	console.log(newMemberRoleMap.toString());
+
+  	if(newMemberRoleMap.has("<@&738516185611501670>") || newMemberRoleMap.has("<@&738516083753091073>")) {
+  		console.log("Winner");
+  	}
 
   	// If the role(s) are present on the old member object but no longer on the new one (i.e role(s) were removed)
 	const removedRole = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
