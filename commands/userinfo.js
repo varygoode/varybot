@@ -9,10 +9,15 @@ module.exports.run = async (client, message, args) => {
     guildMember = message.member;
   }
 
-  console.log(`UserID to gather info on: ${guildMember}`);
-
   // We need the User object aswell for different properties
   const user = guildMember.user;
+
+  let rolemap = guildMember.roles.cache
+            .sort((a, b) => b.position - a.position)
+            .map(r => r)
+            .join(",");
+            if (rolemap.length > 1024) rolemap = "To many roles to display";
+            if (!rolemap) rolemap = "No roles";
 
   let embed = new Discord.MessageEmbed()
     .setAuthor(user.username)
@@ -23,7 +28,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Created at:", user.createdAt, true)
     .addField("Status:", `${user.presence.status}`, true)
     .addField("Game:", `${user.presence.game}`, true)
-    .addField("Roles", guildMember.roles, true);
+    .addField("Roles:", rolemap, true);
 
   message.channel.send(embed);
 }
