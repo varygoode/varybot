@@ -1,5 +1,5 @@
 module.exports = (role) => {
 
-  console.log(`Role event`);
+  console.log(`${role} Changed`);
   
 };
