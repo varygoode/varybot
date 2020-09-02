@@ -27,7 +27,7 @@ module.exports = (client, oldMember, newMember) => {
 	if (addedRole.size > 0) {
 		console.log(`The role ${addedRole.map(r => r.name)} was added to ${oldMember.displayName}.`);
 		if(addedRole.has("738516185611501670") || addedRole.has("738516083753091073")) {
-			newMember.roles.add(newMember.guild.roles.fetch("750655898971537458"));
+			newMember.roles.add(newMember.guild.roles.fetch('750655898971537458'));
 		}
 	}
 
