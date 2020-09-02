@@ -1,5 +1,5 @@
 module.exports = (oldMember, newMember) => {
 
-  console.log(`${newMember} Changed`);
+  console.log(`${newMember.name} Changed`);
   
 };
