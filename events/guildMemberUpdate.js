@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-module.exports = (client, oldMember, newMember) => {
+module.exports = (oldMember, newMember) => {
 
   if (oldMember.roles.size > newMember.roles.size) {
     console.log(`Role added`);
