@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args) => {
     .addField("Created at:", user.createdAt, true)
     .addField("Status:", `${user.presence.status}`, true)
     .addField("Game:", `${user.presence.game}`, true)
-    .addField("Roles", guildMember.roles.map(role => role.name).join('|'), true);
+    .addField("Roles", guildMember.roles, true);
 
   message.channel.send(embed);
 }
