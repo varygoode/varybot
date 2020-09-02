@@ -1,6 +1,6 @@
 module.exports = (role) => {
 
-  let roleID = role.id;
+  let roleID = role.id.toString();
 
   console.log(`${roleID} Changed`);
   
