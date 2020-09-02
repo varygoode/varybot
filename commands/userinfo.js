@@ -1,3 +1,5 @@
+const Discord = require("discord.js");
+
 module.exports.run = async (client, message, args) => {
   let guildMember;
 
@@ -12,7 +14,7 @@ module.exports.run = async (client, message, args) => {
   // We need the User object aswell for different properties
   const user = guildMember.user;
 
-  const embed = new Discord.MessageEmbed()
+  let embed = new Discord.MessageEmbed()
     .setAuthor(user.username)
     .setDescription("Users Info", true)
     .setColor("#64FF00", true)
