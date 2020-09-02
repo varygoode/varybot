@@ -49,18 +49,14 @@ module.exports = (client, oldMember, newMember) => {
 			if(newMember.roles.cache.has("743625569551253636") || newMember.roles.cache.has("693214736736714762") ||
 			   newMember.roles.cache.has("693214952944828426") || newMember.roles.cache.has("749484771146465321") ||
 			   newMember.roles.cache.has("738523221946794145")) {
-				newMember.roles.add("742637482100785186");
+				newMember.roles.add("742637482134208592");
 			}
 			//Add NERDS role separator
 			if(newMember.roles.cache.has("693215135053119568") || newMember.roles.cache.has("743481813972025405") ||
 			   newMember.roles.cache.has("743484247255285783") || newMember.roles.cache.has("750675217004888124") ||
 			   newMember.roles.cache.has("743482189760692237")) {
-				newMember.roles.add("742637482134208592");
+				newMember.roles.add("742637482100785186");
 			}
 		}
 	}
-
-	742637482100785186
-	742637482134208592
-
 };
