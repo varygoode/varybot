@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
   // We need the User object aswell for different properties
   const user = guildMember.user;
 
-  let embed = new Discord.MessageEmbed()
+  const embed = new Discord.MessageEmbed()
     .setAuthor(user.username)
     .setDescription("Users Info", true)
     .setColor("#64FF00", true)
