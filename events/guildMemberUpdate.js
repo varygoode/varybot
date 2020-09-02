@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 
 module.exports = (oldMember, newMember) => {
 
+  	console.log(`${oldMember.displayName}`);
+
   	// If the role(s) are present on the old member object but no longer on the new one (i.e role(s) were removed)
 	const removedRoles = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
 	if (removedRoles.size > 0) console.log(`The roles ${removedRoles.map(r => r.name)} were removed from ${oldMember.displayName}.`);
