@@ -7,6 +7,8 @@ module.exports.run = async (client, message, args) => {
     guildMember = message.member;
   }
 
+  console.log(`UserID to gather info on: ${guildMember}`);
+
   // We need the User object aswell for different properties
   const user = guildMember.user;
 
