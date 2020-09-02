@@ -18,7 +18,7 @@ module.exports = (client, oldMember, newMember) => {
 	if (removedRole.size > 0) {
 		console.log(`The role ${removedRole.map(r => r.name)} was removed from ${oldMember.displayName}.`);
 		if(!newMember.roles.cache.has("738516185611501670") && !newMember.roles.cache.has("738516083753091073")) {
-			if(newMember.roles.cache.has("750655898971537458")) newMember.cache.removeRole("750655898971537458");
+			if(newMember.roles.cache.has("750655898971537458")) newMember.roles.remove("750655898971537458");
 		}
 	}
 
